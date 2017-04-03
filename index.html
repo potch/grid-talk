@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Webpage">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Call My User Agent</title>
+    <meta name="description" content="Possibly the most insightful presentation of all time" />
+
+    <!-- Schema.org markup (Google) -->
+    <meta itemprop="name" content="Call My User Agent">
+    <meta itemprop="description" content="Possibly the most insightful presentation of all time">
+    <meta itemprop="image" content="https://potch.github.io/useragents-talk/img/headshot-sweater.jpg">
+
+    <!-- Twitter Card markup-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@potch">
+    <meta name="twitter:title" content="Call My User Agent">
+    <meta name="twitter:description" content="Possibly the most insightful presentation of all time">
+    <meta name="twitter:creator" content="@potch">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image" content="https://potch.github.io/useragents-talk/img/headshot-sweater.jpg">
+    <meta name="twitter:image:alt" content="A photo of potch looking quite dapper if he does say so himself.">
+
+    <link rel="stylesheet" href="decky.css">
+    <link rel="stylesheet" href="solarized_light.css">
+    <link rel="stylesheet" href="truecrimes_regular_macroman/stylesheet.css">
+    <script src="highlight.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <h1>Call My<br>User Agent</h1>
+    </section>
+    <section>
+      <img src="img/headshot-sweater.jpg">
+      <h2>Hello!</h2>
+    </section>
+    <section>
+      <img src="img/mozilla_wordmark.svg">
+    </section>
+    <section>
+      <code>Mozilla/5.0</code>
+    </section>
+
+    <section>
+      Retro-future of user agents
+    </section>
+
+    <section>
+      <h2>Hyperland (1990)</h2>
+    </section>
+    <section>
+      <video id=hyperland controls src="hyperland.mp4"></video>
+    </section>
+
+    <section>
+      <h3>Do you think of your browser as your agent?</h3>
+    </section>
+
+    <section>
+      <p>The experience of browsing the web is a negotiation between authors and readers,
+    mediated by browsers</p>
+    </section>
+
+    <section>
+      How do User Agents represent us?
+    </section>
+    <section>
+      <h2>Headers</h2>
+    </section>
+    <section>
+      <h2>Headers</h2>
+      <pre><code style="overflow:hidden">Host: www.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Cookie: xxxxxxxxx
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0</code></pre>
+    </section>
+
+    <section>
+      <h2>Headers</h2>
+      <pre><code style="overflow:hidden">Host: www.mozilla.org
+<mark>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0</mark>
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Cookie: xxxxxxxxx
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0</code></pre>
+    </section>
+    <section>
+      <h2>User Agent String</h2>
+    </section>
+
+    <section>
+      <h2>Mosaic</h2>
+      <code class="ua">NCSA_Mosaic/2.0 (Windows 3.1)</code>
+    </section>
+    <section>
+      <h2>Netscape</h2>
+      <code class="ua">Mozilla/1.0 (Win3.1)</code>
+    </section>
+    <section>
+      <h2>Internet Explorer</h2>
+      <code class="ua">Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)</code>
+    </section>
+    <section>
+      <h2>Mozilla</h2>
+      <code class="ua">Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.1) Gecko/20020826</code>
+    </section>
+    <section>
+      <h2>Firefox</h2>
+      <code class="ua">Mozilla/5.0 (Windows; U; Windows NT 5.1; sv-SE; rv:1.7.5) Gecko/20041108 Firefox/1.0</code>
+    </section>
+    <section>
+      <h2>Safari</h2>
+      <code class="ua">Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/85.7 (KHTML, like Gecko) Safari/85.5</code>
+    </section>
+    <section>
+      <h2>Chrome</h2>
+      <code class="ua">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</code>
+    </section>
+    <section>
+      <h2>Edge</h2>
+      <code class="ua">Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10136</code>
+    </section>
+    <section>
+      <img src="img/rocks.jpeg">
+    </section>
+
+    <section>
+      <h2>Headers</h2>
+      <pre><code style="overflow:hidden">Host: www.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
+<mark>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</mark>
+Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Cookie: xxxxxxxxx
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0</code></pre>
+    </section>
+    <section>
+      <h2>Headers</h2>
+      <pre><code style="overflow:hidden">Host: www.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+<mark>Accept-Language: en-US,en-GB;q=0.7,en;q=0.3</mark>
+Accept-Encoding: gzip, deflate, br
+Cookie: xxxxxxxxx
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0</code></pre>
+    </section>
+    <section>
+      <h2>Headers</h2>
+      <pre><code style="overflow:hidden">Host: www.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
+<mark>Accept-Encoding: gzip, deflate, br</mark>
+Cookie: xxxxxxxxx
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0</code></pre>
+    </section>
+    <section>
+      <h2>Headers</h2>
+      <pre><code style="overflow:hidden">Host: www.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+<mark>Cookie: xxxxxxxxx</mark>
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0</code></pre>
+    </section>
+    <section>
+      <h2>Headers</h2>
+      <pre><code style="overflow:hidden">Host: www.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Cookie: xxxxxxxxx
+<mark>DNT: 1</mark>
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0</code></pre>
+    </section>
+
+    <section>
+      <h2>Response Headers</h2>
+      <pre><code>Cache-Control: max-age=600
+Content-Encoding: gzip
+Content-Security-Policy: script-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com; img-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com data: *.optimizely.com www.googletagmanager.com www.google-analytics.com *.tiles.mapbox.com api.mapbox.com creativecommons.org; default-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com; frame-src *.optimizely.com www.googletagmanager.com www.google-analytics.com www.youtube-nocookie.com trackertest.org www.surveygizmo.com accounts.firefox.com accounts.firefox.com.cn www.youtube.com; style-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com 'unsafe-inline'; connect-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com *.optimizely.com www.googletagmanager.com www.google-analytics.com *.tiles.mapbox.com api.mapbox.com; child-src *.optimizely.com www.googletagmanager.com www.google-analytics.com www.youtube-nocookie.com trackertest.org www.surveygizmo.com accounts.firefox.com accounts.firefox.com.cn www.youtube.com
+Content-Type: text/html; charset=utf-8
+Date: Sat, 01 Oct 2016 15:19:28 GMT
+Expires: Sat, 01 Oct 2016 15:20:19 GMT
+Server: cloudflare-nginx
+Vary: Accept-Encoding
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+strict-transport-security: max-age=31536000</code></pre>
+    </section>
+
+    <section>
+      <h2>
+        The User Agent<div><i>~vs~</i></div> The Runtime
+      </h2>
+    </section>
+    <section>
+      <img src="img/install-flash.png">
+    </section>
+    <section>
+      <img src="img/install-java.png">
+    </section>
+
+    <section>
+      <h3>Documents with semantically structured content</h3>
+    </section>
+    <section>
+      <pre><code>&lt;section>
+  Hello, my name is John Doe, I am a graduate research assistant at
+  the University of Dreams. My friends call me Johnny. You can visit
+  my homepage at &lt;a href="http://www.JohnnyD.com">www.JohnnyD.com&lt;/a>.
+  I live at 1234 Peach Drive, Warner Robins, Georgia.
+&lt;/section></code></pre>
+    </section>
+    <section>
+      <pre><code>&lt;section itemscope itemtype="http://schema.org/Person">
+  Hello, my name is
+  &lt;span itemprop="name">John Doe&lt;/span>,
+  I am a
+  &lt;span itemprop="jobTitle">graduate research assistant&lt;/span>
+  at the
+  &lt;span itemprop="affiliation">University of Dreams&lt;/span>.
+  My friends call me
+  &lt;span itemprop="additionalName">Johnny&lt;/span>.
+  You can visit my homepage at
+  &lt;a href="http://www.JohnnyD.com" itemprop="url">www.JohnnyD.com&lt;/a>.
+  &lt;section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    I live at
+    &lt;span itemprop="streetAddress">1234 Peach Drive&lt;/span>,
+    &lt;span itemprop="addressLocality">Warner Robins&lt;/span>,
+    &lt;span itemprop="addressRegion">Georgia&lt;/span>.
+  &lt;/section>
+&lt;/section></code></pre>
+    </section>
+
+    <section>
+      <img src="img/rdf.png">
+      <h2>RDF</h2>
+    </section>
+
+    <section>
+      <h1>Who's reading my site?</h1>
+    </section>
+
+    <section>
+      <h2>Search Engines</h2>
+    </section>
+    <section>
+      <h2>GoogleBot</h2>
+      <code class="ua">Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</code>
+    </section>
+    <section>
+      <img src="img/banana-bread.png">
+    </section>
+    <section>
+      <pre><code>&lt;h3>Directions&lt;/h3>
+&lt;ol>
+  &lt;li>Cream together butter and sugar.&lt;/li>
+  &lt;li>Add eggs and crushed bananas.&lt;/li>
+  &lt;li>Combine well.&lt;/li>
+  &lt;li>Sift together flour, soda and salt. Add to creamed mixture. Add vanilla.&lt;/li>
+  &lt;li>Pour into greased and floured loaf pan.&lt;/li>
+  &lt;li>Bake at 350 degrees for 60 minutes.&lt;/li>
+  &lt;li>Keeps well, refrigerated.&lt;/li>
+&lt;/ol></code></pre>
+    </section>
+
+    <section>
+      <h2>Social Networks</h2>
+    </section>
+    <section>
+      <img src="img/twittercard.png">
+      <h2>Twitter Cards</h2>
+    </section>
+    <section>
+      <img src="img/facebookcard.png">
+      <h2>Facebook Open Graph</h2>
+    </section>
+    <section>
+      <pre><code>&lt;title>Firefox Test Pilot - Min Vid&lt;/title>
+&lt;meta name="description" content="Keep videos front and center. Min Vid lets you display YouTube and Vimeo videos in a small frame that stays in the foreground as you browse the web." />
+
+&lt;meta property="og:title" content="Firefox Test Pilot - Min Vid" />
+&lt;meta property="og:description" content="Keep videos front and center. Min Vid lets you display YouTube and Vimeo videos in a small frame that stays in the foreground as you browse the web." />
+&lt;meta property="og:image" content="https://testpilot-prod.s3.amazonaws.com/experiments_experiment/9/1/910321661a93062e597310f79d7120f5_image_1475081734_0216.jpg" />
+
+&lt;meta name="twitter:title" content="Firefox Test Pilot - Min Vid" />
+&lt;meta name="twitter:description" content="Keep videos front and center. Min Vid lets you display YouTube and Vimeo videos in a small frame that stays in the foreground as you browse the web." />
+&lt;meta name="twitter:card" content="summary_large_image" />
+&lt;meta name="twitter:image" content="https://testpilot-prod.s3.amazonaws.com/experiments_experiment/9/1/910321661a93062e597310f79d7120f5_image_1475081734_0603.jpg" /></code></pre>
+    </section>
+    <section>
+      <h1>Fathom</h1>
+    </section>
+    <section>
+      <pre><code class="js">var titleFinder = ruleset(
+    // Give any title tag a score of 1, and tag it as title-ish:
+    rule(dom("title"),
+         node => [{score: 1, flavor: 'titley'}]),
+
+    // Give any OpenGraph meta tag a score of 2,
+    // and tag it as title-ish as well:
+    rule(dom('meta[property="og:title"]'),
+         node => [{score: 2, flavor: 'titley'}]),
+
+    // Take all title-ish things, and punish them if they contain
+    // navigational claptrap like colons or dashes:
+    rule(flavor("titley"),
+         node => [{score: hasColonsOrDashes(node.element) ? .5 : 1}])
+);</code></pre>
+    </section>
+    <section>
+      <h2>Demo Time!</h2>
+    </section>
+
+    <section>
+      <h2>Browsers</h2>
+      <span class="hide">(duh)</span>
+    </section>
+    <section>
+      <h2>Browsers</h2>
+      <span>(duh)</span>
+    </section>
+    <section>
+      <h2>Link Tags</h2>
+    </section>
+    <section>
+      &lt;link rel="search">
+    </section>
+    <section>
+      &lt;link rel="next">
+    </section>
+    <section>
+      &lt;link rel="prev">
+    </section>
+
+    <section>
+      <h1>Accessibility!</h1>
+    </section>
+    <section>
+      <h2>Accessibility is for everyone!</h2>
+    </section>
+    <section>
+      <img src="img/a11y.png">
+    </section>
+
+    <section>
+      <img src="img/permissions.png">
+      <h2>Permissions</h2>
+    </section>
+
+    <section>
+      <img src="img/holding-hands.gif">
+      <h3>Browsers and Servers working together!</h3>
+    </section>
+
+    <section>
+      <h2>Service Workers</h2>
+    </section>
+    <section>
+      <h2>Push Notifications!</h2>
+    </section>
+    <section>
+      <h2>Push Notifications!</h2>
+    </section>
+
+    <section>
+      <h2>Reader Mode</h2>
+    </section>
+    <section>
+      <img src="img/clickhole.png">
+    </section>
+    <section>
+      <img src="img/readermode.png">
+    </section>
+
+    <section>
+      <h2>Tracking Protection</h2>
+    </section>
+
+    <section>
+      <h1 style="color: #fff; text-shadow: 0 0 .1em #888; font-size: 10rem; mix-blend-mode: exclusion; position: relative; z-index: 1">The Future</h1>
+      <img class="cover" src="img/mind-blown.gif">
+    </section>
+
+    <section>
+      <img src="img/amazonecho.jpeg">
+    </section>
+
+    <section>
+      <h1 class="vr" text="VR">VR</h1>
+    </section>
+    <section>
+      <h1 class="vr" text="WebVR">WebVR!</h1>
+    </section>
+    <section>
+      <img style="max-width: 90%" src="img/aframe-name.svg">
+    </section>
+
+    <section>
+      <h2>Something Something Deep Learning Something</h2>
+    </section>
+
+    <section>
+      <h3>We're in the pixels and pointers era, but it won't last forever.</h3>
+    </section>
+
+    <section>
+      <h2 style="margin-bottom: 2rem;">Thanks!</h2>
+      <a class="cite" href="https://twitter.com/potch">Me on Twitter</a>
+      <a class="cite" href="https://potch.github.io/useragents-talk/">These slides</a>
+      <a class="cite" href="http://webaim.org/blog/user-agent-string-history/">History of the User Agent String</a>
+    </section>
+
+    <footer>
+      <div class="progress talk-progress"></div>
+      <div class="progress time-progress"></div>
+    </footer>
+    <script src="decky.js"></script>
+    <script>
+
+      var els = document.querySelectorAll('code[data-src]');
+      Array.from(els).forEach(function (el) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", function () {
+          el.innerHTML = this.responseText.replace('<', '&lt;', 'g');
+          hljs.highlightBlock(el);
+        });
+        xhr.open("GET", el.getAttribute('data-src'));
+        xhr.send();
+      });
+
+      var iframes = document.querySelectorAll('iframe');
+      iframes = Array.from(iframes);
+      iframes.forEach(function (i) {
+        var src = i.src;
+        i.setAttribute('data-src', src);
+        i.src = '';
+      });
+
+      var talkProgress = document.querySelector('.talk-progress');
+      var timeProgress = document.querySelector('.time-progress');
+      var sTime;
+      var timer;
+      var going = false;
+      decky.onSlideChange = function (n) {
+        if (n > 1 && !going) {
+          going = true;
+          timer = setInterval(update, 100);
+          sTime = Date.now();
+          console.log('starting timer');
+        }
+        var pct = n / decky.num * 100;
+        talkProgress.style.transform = 'translate(' + pct + '%, 0)';
+
+        iframes.forEach(function (i) {
+          i.src = '';
+        });
+
+        var f = document.querySelector('.active iframe');
+        if (f && window.top === window) {
+          f.src = f.getAttribute('data-src');
+        }
+      };
+      function update() {
+        var time = Math.min(100, ((Date.now() - sTime) / (40 * 60 * 1000)) * 100);
+        timeProgress.style.transform = 'translate(' + time + '%, 0)';
+      }
+    </script>
+    <script>
+      var seeked = false;
+      hyperland.addEventListener('canplaythrough', function () {
+        if (!seeked) hyperland.currentTime = 2 * 60 + 59;
+        seeked = true;
+      });
+      var paused = false;
+      hyperland.addEventListener('timeupdate', function () {
+        if (!paused && hyperland.currentTime > 5 * 60 + 17.5) {
+          hyperland.pause();
+          paused = true;
+        }
+      })
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

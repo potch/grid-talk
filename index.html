@@ -3,439 +3,402 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Call My User Agent</title>
+    <title>On the Grid</title>
     <meta name="description" content="Possibly the most insightful presentation of all time" />
 
-    <!-- Schema.org markup (Google) -->
-    <meta itemprop="name" content="Call My User Agent">
-    <meta itemprop="description" content="Possibly the most insightful presentation of all time">
-    <meta itemprop="image" content="https://potch.github.io/useragents-talk/img/headshot-sweater.jpg">
-
-    <!-- Twitter Card markup-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@potch">
-    <meta name="twitter:title" content="Call My User Agent">
-    <meta name="twitter:description" content="Possibly the most insightful presentation of all time">
-    <meta name="twitter:creator" content="@potch">
-    <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image" content="https://potch.github.io/useragents-talk/img/headshot-sweater.jpg">
-    <meta name="twitter:image:alt" content="A photo of potch looking quite dapper if he does say so himself.">
-
     <link rel="stylesheet" href="decky.css">
-    <link rel="stylesheet" href="solarized_light.css">
-    <link rel="stylesheet" href="truecrimes_regular_macroman/stylesheet.css">
+    <link rel="stylesheet" href="solarized-dark.css">
     <script src="highlight.min.js"></script>
   </head>
   <body>
     <section>
-      <h1>Call My<br>User Agent</h1>
+      <audio id="intro" src="thegrid.ogg?1"></audio>
     </section>
     <section>
-      <img src="img/headshot-sweater.jpg">
-      <h2>Hello!</h2>
     </section>
     <section>
-      <img src="img/mozilla_wordmark.svg">
-    </section>
-    <section>
-      <code>Mozilla/5.0</code>
-    </section>
-
-    <section>
-      Retro-future of user agents
-    </section>
-
-    <section>
-      <h2>Hyperland (1990)</h2>
-    </section>
-    <section>
-      <video id=hyperland controls src="hyperland.mp4"></video>
-    </section>
-
-    <section>
-      <h3>Do you think of your browser as your agent?</h3>
+      <div class="glow" style="
+        font-size: 5rem;
+        margin: 0;
+        height: 70vh;
+        font-weight: 800;
+        display: grid;
+        grid-template-areas: 'a b c'
+                             'd e f'
+                             'g h i';
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3vmin 0;
+        align-content: center;
+      ">
+        <span style="grid-area: a">On</span>
+        <i style="grid-area: e">the</i>
+        <span style="grid-area: i">Grid</span>
+      </h1>
     </section>
 
     <section>
-      <p>The experience of browsing the web is a negotiation between authors and readers,
-    mediated by browsers</p>
+      <img style="max-width: 80vw" src="img/moz-logo-one-color-white-rgb.svg">
     </section>
 
     <section>
-      How do User Agents represent us?
-    </section>
-    <section>
-      <h2>Headers</h2>
-    </section>
-    <section>
-      <h2>Headers</h2>
-      <pre><code style="overflow:hidden">Host: www.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
-Accept-Encoding: gzip, deflate, br
-Cookie: xxxxxxxxx
-DNT: 1
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Cache-Control: max-age=0</code></pre>
+      <h1 style="border: 1px solid cyan; width:75vh; height: 75vh; text-align: left; padding: 2vh;white-space: nowrap;">CSS<br><i>IS</i><br>AWESOME</h1>
     </section>
 
     <section>
-      <h2>Headers</h2>
-      <pre><code style="overflow:hidden">Host: www.mozilla.org
-<mark>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0</mark>
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
-Accept-Encoding: gzip, deflate, br
-Cookie: xxxxxxxxx
-DNT: 1
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Cache-Control: max-age=0</code></pre>
-    </section>
-    <section>
-      <h2>User Agent String</h2>
-    </section>
-
-    <section>
-      <h2>Mosaic</h2>
-      <code class="ua">NCSA_Mosaic/2.0 (Windows 3.1)</code>
-    </section>
-    <section>
-      <h2>Netscape</h2>
-      <code class="ua">Mozilla/1.0 (Win3.1)</code>
-    </section>
-    <section>
-      <h2>Internet Explorer</h2>
-      <code class="ua">Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)</code>
-    </section>
-    <section>
-      <h2>Mozilla</h2>
-      <code class="ua">Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.1) Gecko/20020826</code>
-    </section>
-    <section>
-      <h2>Firefox</h2>
-      <code class="ua">Mozilla/5.0 (Windows; U; Windows NT 5.1; sv-SE; rv:1.7.5) Gecko/20041108 Firefox/1.0</code>
-    </section>
-    <section>
-      <h2>Safari</h2>
-      <code class="ua">Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/85.7 (KHTML, like Gecko) Safari/85.5</code>
-    </section>
-    <section>
-      <h2>Chrome</h2>
-      <code class="ua">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36</code>
-    </section>
-    <section>
-      <h2>Edge</h2>
-      <code class="ua">Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10136</code>
-    </section>
-    <section>
-      <img src="img/rocks.jpeg">
+      <svg viewBox="10 10 160 160">
+        <style type="text/css">
+          path {stroke:#00FFFF;fill:none;filter:url(#glow);}
+          path.arrows {stroke-width: .5}
+        </style>
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <path d="M50,50 h100 v100 h-100 v-100 z m50,0 v100 m-50,-50 h100"/>
+        <path class="arrows" transform="translate(50,25)" d="M0,0 v20 m10,-15 l-5,5 5,5 m-5,-5 h90 m-5,-5 l5,5 -5 5 m 10,-15 v20"/>
+        <path class="arrows" transform="translate(45,50) rotate(90)" d="M0,0 v20 m10,-15 l-5,5 5,5 m-5,-5 h90 m-5,-5 l5,5 -5 5 m 10,-15 v20"/>
+      </svg>
     </section>
 
     <section>
-      <h2>Headers</h2>
-      <pre><code style="overflow:hidden">Host: www.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
-<mark>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</mark>
-Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
-Accept-Encoding: gzip, deflate, br
-Cookie: xxxxxxxxx
-DNT: 1
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Cache-Control: max-age=0</code></pre>
-    </section>
-    <section>
-      <h2>Headers</h2>
-      <pre><code style="overflow:hidden">Host: www.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-<mark>Accept-Language: en-US,en-GB;q=0.7,en;q=0.3</mark>
-Accept-Encoding: gzip, deflate, br
-Cookie: xxxxxxxxx
-DNT: 1
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Cache-Control: max-age=0</code></pre>
-    </section>
-    <section>
-      <h2>Headers</h2>
-      <pre><code style="overflow:hidden">Host: www.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
-<mark>Accept-Encoding: gzip, deflate, br</mark>
-Cookie: xxxxxxxxx
-DNT: 1
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Cache-Control: max-age=0</code></pre>
-    </section>
-    <section>
-      <h2>Headers</h2>
-      <pre><code style="overflow:hidden">Host: www.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
-Accept-Encoding: gzip, deflate, br
-<mark>Cookie: xxxxxxxxx</mark>
-DNT: 1
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Cache-Control: max-age=0</code></pre>
-    </section>
-    <section>
-      <h2>Headers</h2>
-      <pre><code style="overflow:hidden">Host: www.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en-GB;q=0.7,en;q=0.3
-Accept-Encoding: gzip, deflate, br
-Cookie: xxxxxxxxx
-<mark>DNT: 1</mark>
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
-Cache-Control: max-age=0</code></pre>
+      <h1 class="evil">&lt;table></h1>
     </section>
 
     <section>
-      <h2>Response Headers</h2>
-      <pre><code>Cache-Control: max-age=600
-Content-Encoding: gzip
-Content-Security-Policy: script-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com; img-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com data: *.optimizely.com www.googletagmanager.com www.google-analytics.com *.tiles.mapbox.com api.mapbox.com creativecommons.org; default-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com; frame-src *.optimizely.com www.googletagmanager.com www.google-analytics.com www.youtube-nocookie.com trackertest.org www.surveygizmo.com accounts.firefox.com accounts.firefox.com.cn www.youtube.com; style-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com 'unsafe-inline'; connect-src 'self' *.mozilla.net *.mozilla.org *.mozilla.com *.optimizely.com www.googletagmanager.com www.google-analytics.com *.tiles.mapbox.com api.mapbox.com; child-src *.optimizely.com www.googletagmanager.com www.google-analytics.com www.youtube-nocookie.com trackertest.org www.surveygizmo.com accounts.firefox.com accounts.firefox.com.cn www.youtube.com
-Content-Type: text/html; charset=utf-8
-Date: Sat, 01 Oct 2016 15:19:28 GMT
-Expires: Sat, 01 Oct 2016 15:20:19 GMT
-Server: cloudflare-nginx
-Vary: Accept-Encoding
-X-Frame-Options: DENY
-X-XSS-Protection: 1; mode=block
-strict-transport-security: max-age=31536000</code></pre>
+      <h3>
+        &lt;img src="<span class="evil">spacer.gif</span>" width="50" height="30">
+      </h3>
     </section>
 
     <section>
-      <h2>
-        The User Agent<div><i>~vs~</i></div> The Runtime
-      </h2>
-    </section>
-    <section>
-      <img src="img/install-flash.png">
-    </section>
-    <section>
-      <img src="img/install-java.png">
+      <iframe class="cover" src="https://www.warnerbros.com/archive/spacejam/movie/jam.htm"></iframe>
     </section>
 
     <section>
-      <h3>Documents with semantically structured content</h3>
-    </section>
-    <section>
-      <pre><code>&lt;section>
-  Hello, my name is John Doe, I am a graduate research assistant at
-  the University of Dreams. My friends call me Johnny. You can visit
-  my homepage at &lt;a href="http://www.JohnnyD.com">www.JohnnyD.com&lt;/a>.
-  I live at 1234 Peach Drive, Warner Robins, Georgia.
-&lt;/section></code></pre>
-    </section>
-    <section>
-      <pre><code>&lt;section itemscope itemtype="http://schema.org/Person">
-  Hello, my name is
-  &lt;span itemprop="name">John Doe&lt;/span>,
-  I am a
-  &lt;span itemprop="jobTitle">graduate research assistant&lt;/span>
-  at the
-  &lt;span itemprop="affiliation">University of Dreams&lt;/span>.
-  My friends call me
-  &lt;span itemprop="additionalName">Johnny&lt;/span>.
-  You can visit my homepage at
-  &lt;a href="http://www.JohnnyD.com" itemprop="url">www.JohnnyD.com&lt;/a>.
-  &lt;section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    I live at
-    &lt;span itemprop="streetAddress">1234 Peach Drive&lt;/span>,
-    &lt;span itemprop="addressLocality">Warner Robins&lt;/span>,
-    &lt;span itemprop="addressRegion">Georgia&lt;/span>.
-  &lt;/section>
-&lt;/section></code></pre>
+      <h1 class="evil"><del>&lt;table></del></h1>
     </section>
 
     <section>
-      <img src="img/rdf.png">
-      <h2>RDF</h2>
+      <h2><code>float</code> along</h2>
     </section>
 
     <section>
-      <h1>Who's reading my site?</h1>
+      <img style="filter:contrast(110%) \brightness(90%)invert(100%);mix-blend-mode:luminosity" src="img/grid-system.jpg">
     </section>
 
     <section>
-      <h2>Search Engines</h2>
-    </section>
-    <section>
-      <h2>GoogleBot</h2>
-      <code class="ua">Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</code>
-    </section>
-    <section>
-      <img src="img/banana-bread.png">
-    </section>
-    <section>
-      <pre><code>&lt;h3>Directions&lt;/h3>
-&lt;ol>
-  &lt;li>Cream together butter and sugar.&lt;/li>
-  &lt;li>Add eggs and crushed bananas.&lt;/li>
-  &lt;li>Combine well.&lt;/li>
-  &lt;li>Sift together flour, soda and salt. Add to creamed mixture. Add vanilla.&lt;/li>
-  &lt;li>Pour into greased and floured loaf pan.&lt;/li>
-  &lt;li>Bake at 350 degrees for 60 minutes.&lt;/li>
-  &lt;li>Keeps well, refrigerated.&lt;/li>
-&lt;/ol></code></pre>
+      <img style="filter:invert(100%);mix-blend-mode:lighten" src="img/every-website.png">
     </section>
 
     <section>
-      <h2>Social Networks</h2>
-    </section>
-    <section>
-      <img src="img/twittercard.png">
-      <h2>Twitter Cards</h2>
-    </section>
-    <section>
-      <img src="img/facebookcard.png">
-      <h2>Facebook Open Graph</h2>
-    </section>
-    <section>
-      <pre><code>&lt;title>Firefox Test Pilot - Min Vid&lt;/title>
-&lt;meta name="description" content="Keep videos front and center. Min Vid lets you display YouTube and Vimeo videos in a small frame that stays in the foreground as you browse the web." />
-
-&lt;meta property="og:title" content="Firefox Test Pilot - Min Vid" />
-&lt;meta property="og:description" content="Keep videos front and center. Min Vid lets you display YouTube and Vimeo videos in a small frame that stays in the foreground as you browse the web." />
-&lt;meta property="og:image" content="https://testpilot-prod.s3.amazonaws.com/experiments_experiment/9/1/910321661a93062e597310f79d7120f5_image_1475081734_0216.jpg" />
-
-&lt;meta name="twitter:title" content="Firefox Test Pilot - Min Vid" />
-&lt;meta name="twitter:description" content="Keep videos front and center. Min Vid lets you display YouTube and Vimeo videos in a small frame that stays in the foreground as you browse the web." />
-&lt;meta name="twitter:card" content="summary_large_image" />
-&lt;meta name="twitter:image" content="https://testpilot-prod.s3.amazonaws.com/experiments_experiment/9/1/910321661a93062e597310f79d7120f5_image_1475081734_0603.jpg" /></code></pre>
-    </section>
-    <section>
-      <h1>Fathom</h1>
-    </section>
-    <section>
-      <pre><code class="js">var titleFinder = ruleset(
-    // Give any title tag a score of 1, and tag it as title-ish:
-    rule(dom("title"),
-         node => [{score: 1, flavor: 'titley'}]),
-
-    // Give any OpenGraph meta tag a score of 2,
-    // and tag it as title-ish as well:
-    rule(dom('meta[property="og:title"]'),
-         node => [{score: 2, flavor: 'titley'}]),
-
-    // Take all title-ish things, and punish them if they contain
-    // navigational claptrap like colons or dashes:
-    rule(flavor("titley"),
-         node => [{score: hasColonsOrDashes(node.element) ? .5 : 1}])
-);</code></pre>
-    </section>
-    <section>
-      <h2>Demo Time!</h2>
+      <h1>Paving the Cowpaths</h1>
     </section>
 
     <section>
-      <h2>Browsers</h2>
-      <span class="hide">(duh)</span>
-    </section>
-    <section>
-      <h2>Browsers</h2>
-      <span>(duh)</span>
-    </section>
-    <section>
-      <h2>Link Tags</h2>
-    </section>
-    <section>
-      &lt;link rel="search">
-    </section>
-    <section>
-      &lt;link rel="next">
-    </section>
-    <section>
-      &lt;link rel="prev">
+      <h4>$ &rarr; document.querySelector</h4>
     </section>
 
     <section>
-      <h1>Accessibility!</h1>
-    </section>
-    <section>
-      <h2>Accessibility is for everyone!</h2>
-    </section>
-    <section>
-      <img src="img/a11y.png">
+      flexbox!
     </section>
 
     <section>
-      <img src="img/permissions.png">
-      <h2>Permissions</h2>
+      only 1-dimensional constraints
+      <div style="width: 60%; display: flex; flex-wrap: wrap; flex-direction: row; text-align: left; font-size: .5em; margin: 1em 0 0; align-items: baseline;">
+        <label style="flex: 1 1 auto">Cool Label</label><input placeholder="rad input" style="font: inherit; flex: 1 1 50%;margin-bottom: 1em;">
+        <label style="flex: 1 1 auto">Other Label</label><input placeholder="also input" style="font: inherit; flex: 1 1 50%">
+      </div>
     </section>
 
     <section>
-      <img src="img/holding-hands.gif">
-      <h3>Browsers and Servers working together!</h3>
+      <h1>CSS Grid Layout</h1>
     </section>
 
     <section>
-      <h2>Service Workers</h2>
-    </section>
-    <section>
-      <h2>Push Notifications!</h2>
-    </section>
-    <section>
-      <h2>Push Notifications!</h2>
+      based on old MS proposal
     </section>
 
     <section>
-      <h2>Reader Mode</h2>
-    </section>
-    <section>
-      <img src="img/clickhole.png">
-    </section>
-    <section>
-      <img src="img/readermode.png">
+      <h3>2-dimensional art direction for the web!</h3>
     </section>
 
     <section>
-      <h2>Tracking Protection</h2>
+      implicit and explicit forms
     </section>
 
     <section>
-      <h1 style="color: #fff; text-shadow: 0 0 .1em #888; font-size: 10rem; mix-blend-mode: exclusion; position: relative; z-index: 1">The Future</h1>
-      <img class="cover" src="img/mind-blown.gif">
+      explicit - place specific elements in specific places
     </section>
 
     <section>
-      <img src="img/amazonecho.jpeg">
+      high degree of control
     </section>
 
     <section>
-      <h1 class="vr" text="VR">VR</h1>
-    </section>
-    <section>
-      <h1 class="vr" text="WebVR">WebVR!</h1>
-    </section>
-    <section>
-      <img style="max-width: 90%" src="img/aframe-name.svg">
+      primary outer site layout, app interface
     </section>
 
     <section>
-      <h2>Something Something Deep Learning Something</h2>
+      implicit - placement based on sequence of content
     </section>
 
     <section>
-      <h3>We're in the pixels and pointers era, but it won't last forever.</h3>
+      high degree of flexibility
+    </section>
+
+    <section>
+      "table view", grids, lists
+    </section>
+
+    <section>
+      defining the grid
+    </section>
+
+    <section>
+      <code>grid-template-rows</code><code>grid-template-columns</code>
+    </section>
+
+    <section>
+      <code>200px 1fr
+    </section>
+
+    <section>
+      <h2>Phenomenal Cosmic Power</h>
+    </section>
+
+    <section>
+      <h2><code>grid-auto-flow</code></h2>
+    </section>
+
+    <section>
+      <div class="cols">
+      <style class="stylish clean" contenteditable>.grid ul {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(4, 10vw);
+  grid-auto-rows: 10vw;
+  grid-auto-flow: row;
+}
+
+li:nth-child(3) {
+  grid-row: span 1;
+  grid-column: span 3;
+}
+
+li:nth-child(8) {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+li {
+  border: 1px solid cyan;
+}
+
+      </style>
+      <div class="grid clean">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+    <section>
+      <h2><code>minmax()</code></h2>
+    </section>
+
+    <section>
+      <code>
+        min-width: 100px;<br>
+        max-width: 20%;
+      </code>
+    </section>
+
+    <section>
+      <code>
+        grid-template-rows: ?
+      </code>
+    </section>
+
+    <section>
+      <code>
+        grid-template-rows:
+        minmax(100px, 20%)
+        minmax(200px, 1fr);
+      </code>
+    </section>
+
+    <section>
+      <pre><code>border-top-width: 4px;
+border-left-color: cyan;
+
+border: 4px solid cyan</code></pre>
+    </section>
+
+    <section>
+      <pre><code>
+&lt;div class="page">
+  &lt;header>Header&lt;/header>
+  &lt;nav>Navigation&lt;/nav>
+  &lt;main>Main area&lt;/main>
+  &lt;footer>Footer&lt;/footer>
+&lt;/div>
+      </pre></code>
+    </section>
+
+    <section class="clean">
+      <div class="page">
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>Main area</main>
+        <footer>Footer</footer>
+      </div>
+    </section>
+
+    <section>
+      <pre style="font-size:.7em;">
++--------------+
+|     head     |
++--------------+
+| nav |  main  |
+|     |        |
+|     +--------+
+|     |  foot  |
++-----+--------+</pre>
+    </section>
+
+    <section>
+      <pre style="font-size:.7em;">
++--------------+
+|     head     | auto
++--------------+
+| nav |  main  | 1fr
+|     |        |
+|     +--------+
+|     |  foot  | auto
++-----+--------+
+ 200px   1fr</pre>
+    </section>
+
+    <section>
+      <pre style="font-size:.7em;">
+head   head  auto
+nav    main  1fr
+nav    foot  auto
+200px  1fr</pre>
+    </section>
+
+    <section>
+      <pre style="font-size:.7em;">
+ "head   head" auto
+ "nav    main" 1fr
+ "nav    foot" auto
+/ 200px  1fr</pre>
+    </section>
+
+    <section>
+      <div class="cols">
+      <style class="stylish clean" contenteditable>.page {
+  display: grid;
+  color: #000;
+  font-size: 1rem;
+  width: 50%;
+  height: 80%;
+  grid: "head   head" auto
+        "nav    main" 1fr
+        "nav    foot" auto
+       / 200px  1fr;
+}
+
+.page header {
+  font-size: 4rem;
+  background-color: lightblue;
+  grid-area: head;
+}
+
+.page nav {
+  background-color: gray;
+  grid-area: nav;
+}
+
+.page main {
+  background-color: #eee;
+  grid-area: main;
+}
+
+.page footer {
+  background-color: lightblue;
+  grid-column: foot;
+}
+
+.page > * {
+  padding: .5rem;
+  text-align: center;
+}
+      </style>
+      <div class="page clean">
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>Main area</main>
+        <footer>Footer</footer>
+      </div>
+    </div>
+    </section>
+
+    <section>
+      <h2><i>demos</i></h2>
+    </section>
+
+    <section>
+      <iframe src="http://labs.jensimmons.com/2016/examples/spacejam.html" class="cover"></iframe>
+    </section>
+
+    <section>
+      <iframe class="cani" src="https://caniuse.bitsofco.de/embed/index.html?feat=css-grid&periods=future_1,current,past_1,past_2"></iframe>
+    </section>
+
+    <section>
+      <iframe class="cani" src="https://caniuse.bitsofco.de/embed/index.html?feat=css-supports-api&periods=future_1,current,past_1,past_2"></iframe>
+    </section>
+
+    <section>
+      <h3>fallback-friendly</h3>
+      <pre><code class="css">
+/* Completely Reasonable layout for older browsers */
+article { ... }
+
+@supports (display: grid) {
+  /* Cutting-edge layout for hip browsers */
+}
+
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Art Direction in the Second Dimension!</h2>
     </section>
 
     <section>
       <h2 style="margin-bottom: 2rem;">Thanks!</h2>
       <a class="cite" href="https://twitter.com/potch">Me on Twitter</a>
-      <a class="cite" href="https://potch.github.io/useragents-talk/">These slides</a>
-      <a class="cite" href="http://webaim.org/blog/user-agent-string-history/">History of the User Agent String</a>
+      <a class="cite" href="https://gridbyexample.com/">Rachel Andrew's "Grid By Example"</a>
+      <a class="cite" href="http://labs.jensimmons.com/">Jen Simmons's Layout Lab</a>
     </section>
 
     <footer>
@@ -474,7 +437,11 @@ strict-transport-security: max-age=31536000</code></pre>
           going = true;
           timer = setInterval(update, 100);
           sTime = Date.now();
+          document.querySelector('#intro').play();
           console.log('starting timer');
+        }
+        if (n > 3) {
+          document.querySelector('#intro').pause();
         }
         var pct = n / decky.num * 100;
         talkProgress.style.transform = 'translate(' + pct + '%, 0)';

@@ -221,12 +221,12 @@ section > .contain {
 }
 
 .clean {
-  -moz-text-fill-color: currentColor;
-  -webkit-text-fill-color: currentColor;
-  -moz-text-stroke-color: currentColor;
-  -webkit-text-stroke-color: currentColor;
-  -moz-text-stroke-width: currentColor;
-  -webkit-text-stroke-width: currentColor;
+  -moz-text-fill-color: initial;
+  -webkit-text-fill-color: initial;
+  -moz-text-stroke-color: initial;
+  -webkit-text-stroke-color: initial;
+  -moz-text-stroke-width: initial;
+  -webkit-text-stroke-width: initial;
   text-shadow: 0 none;
 }
 pre {

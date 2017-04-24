@@ -11,10 +11,12 @@
     <script src="highlight.min.js"></script>
   </head>
   <body>
+    <section><div class="cover" style="background-color: #111"></div></section>
     <section>
-      <audio id="intro" src="thegrid.ogg?1"></audio>
+      <video id="bumper" src="tvspecial.mp4" style="mix-blend-mode: lighten; fliter: brightness(0.9) contrast(120%)" class="cover"></video>
     </section>
     <section>
+      <audio id="intro" src="thegrid.ogg?1"></audio>
     </section>
     <section>
       <div class="glow" style="
@@ -85,7 +87,7 @@
     </section>
 
     <section>
-      <h2><code>float</code> along</h2>
+      <h2>we <code>float</code> along</h2>
     </section>
 
     <section>
@@ -161,12 +163,82 @@
     </section>
 
     <section>
-      <code>grid-template-rows</code><code>grid-template-columns</code>
+      <div style="text-align: left; position: relative; top: -2em;">
+      <code style="opacity: .1">display: none</code><br>
+      <code style="opacity: .2">display: block</code><br>
+      <code style="opacity: .3">display: inline</code><br>
+      <code style="opacity: .5">display: flex</code><br>
+      <code>display: grid</code>
+      </div>
     </section>
 
     <section>
-      <code>200px 1fr
+      <div class="cols">
+      <style class="stylish clean" contenteditable>.t-rows {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 3em 30%;
+  width: 40vw;
+  height: 30vw;
+}
+
+.t-rows > * {
+  border: 1px solid cyan;
+  padding: .5em;
+  font-size: .5em;
+}
+      </style>
+      <div class="t-rows clean">
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+        <div>d</div>
+      </div>
+    </div>
     </section>
+
+    <section>
+      <div class="cols">
+      <style class="stylish clean" contenteditable>.t-lines {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 40vw;
+  height: 30vw;
+}
+
+.t-lines div:nth-child(1) {
+ grid-row: 1 / 2;
+ grid-column: 2 / 5;
+}
+
+.t-lines div:nth-child(2) {
+  grid-row: 3 / 6;
+  grid-column: 3 / 6;
+}
+
+.t-lines div:nth-child(3) {
+  grid-row: 3 / 5;
+  grid-column: 1 / 4;
+}
+
+.t-lines > * {
+  border: 1px solid cyan;
+  padding: .5em;
+  font-size: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+      </style>
+      <div class="t-lines clean">
+        <div>a</div>
+        <div>b</div>
+        <div>c</div>
+      </div>
+    </div>
+    </section>
+
 
     <section>
       <h2>Phenomenal Cosmic Power</h>
@@ -191,13 +263,21 @@ li:nth-child(3) {
   grid-column: span 3;
 }
 
-li:nth-child(8) {
+li:nth-child(5) {
   grid-row: span 2;
+  grid-column: span 2;
+}
+
+li:nth-child(7) {
+  grid-row: span 1;
   grid-column: span 2;
 }
 
 li {
   border: 1px solid cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
       </style>
@@ -213,7 +293,6 @@ li {
           <li>8</li>
           <li>9</li>
           <li>10</li>
-          <li>11</li>
         </ul>
       </div>
     </div>
@@ -437,10 +516,15 @@ article { ... }
           going = true;
           timer = setInterval(update, 100);
           sTime = Date.now();
-          document.querySelector('#intro').play();
           console.log('starting timer');
         }
-        if (n > 3) {
+        if (n === 2) {
+          document.querySelector('#bumper').play();
+        }
+        if (n === 3) {
+          document.querySelector('#intro').play();
+        }
+        if (n < 3 || n > 5) {
           document.querySelector('#intro').pause();
         }
         var pct = n / decky.num * 100;
@@ -473,6 +557,14 @@ article { ... }
           paused = true;
         }
       })
+    </script>
+    <script>
+      var editors = document.querySelectorAll('style[contenteditable]');
+      for (var i =0; i < editors.length; i++) {
+        editors[i].addEventListener('keydown', function (e) {
+          e.stopPropagation();
+        }, false);
+      }
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>

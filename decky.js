@@ -35,7 +35,7 @@ var decky = (function () {
           prevSlide();
           e.preventDefault();
           break;
-        // case 32:
+        case 32:
         case 39:
         case 40:
           nextSlide();
